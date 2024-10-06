@@ -1,0 +1,171 @@
+
+.headerdiv{
+ display: flex;
+ flex-direction: row;
+ justify-content: space-around;
+ 
+}
+
+li{
+    list-style-type: none;
+    font-size: 20px;
+    padding-top: 50px;
+
+}
+.nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 50px;
+}
+.logo{
+    padding-right: 10px;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    padding-top: 20px;
+}
+
+.block {
+    position: relative;
+    flex: 1;
+    transition: flex 0.5s ease;
+    overflow: hidden;
+}
+
+.block img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.block:hover {
+    flex: 2;
+}
+
+.block-left:hover ~ .block-right {
+    flex: 0.5;
+}
+
+.block-right:hover ~ .block-left {
+    flex: 0.5;
+}
+
+.overlay {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.footer {
+    background-color: #f8f8f8;
+    padding: 30px 0;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 180px; 
+    margin: 20px;
+}
+
+.footer-column h4 {
+    font-size: 14px; 
+    font-weight: bold;
+    margin-bottom: 10px; 
+}
+
+.footer-column ul {
+    list-style: none;
+    font-size: 12px; 
+}
+
+.footer-column ul li {
+    margin-bottom: 8px; 
+}
+
+.footer-column ul li a {
+    color: #333;
+    text-decoration: none;
+    font-size: 12px; 
+}
+
+.footer-column ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer-column form {
+    margin-top: 10px;
+}
+
+.footer-column input[type="email"] {
+    width: 100%;
+    padding: 8px; 
+    border: 1px solid #ccc;
+    margin-top: 5px;
+    font-size: 12px; 
+}
+
+.footer-column select {
+    width: 100%;
+    padding: 8px; 
+    border: 1px solid #ccc;
+    margin-top: 5px;
+    font-size: 12px; 
+}
+
+@media only screen and (max-width: 768px) {
+
+    .container {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .block {
+        height: 50vh; 
+    }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-column {
+        width: 100%; 
+        max-width: 100%;
+        margin: 10px 0;
+    }
+
+    .overlay {
+        font-size: 18px; 
+    }
+
+   
+    li {
+        padding-top: 20px;
+        font-size: 18px;
+    }
+
+    .footer-column input[type="email"],
+    .footer-column select {
+        font-size: 14px;
+    }
+}
